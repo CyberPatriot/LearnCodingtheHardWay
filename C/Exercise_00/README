@@ -1,0 +1,31 @@
+/////////////////////////////////////////
+// Install the GCC for building software
+// --------------------------------------
+//To get GCC on Debian Machines:
+//  sudo apt-get install build-essential
+
+//To get GCC on Debian Machines:
+//   su -c "yum groupinstall development-tools"
+
+//To get GCC on Windows Boxes:
+//   1) http://sourceforge.net/projects/mingw/
+//   2) Click Green "Download" Button
+//   3) Run MinGW-get-installer; Click Next/Accept Till it Takes
+//   4) ­ADD MinGW to PATH!
+//      - Press Windows Button + R
+//      - Type: "control sysdm.cpl" press enter (Hit UAC Yes if it pops)
+//      - Select "Advanced" Tab
+//      - Click "Environment Variables" on the bottom right
+//      - On the bottom half, System Variables, find PATH; click Edit...
+//      - Scroll to the right; add Path to MinGW w/ semicolon (ex: 
+;C:\MinGW\bin\ )
+
+/////////////////////////////////////////////////
+// Install an Editor
+// ------------------
+//
+// Linux:
+// Use vi/vim/nano/pico etc
+
+//Windows:
+// Use Notepad++: http://notepad-plus-plus.org/download/v6.3.3.html
