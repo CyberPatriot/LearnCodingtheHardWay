@@ -1,4 +1,35 @@
 Do this on Linux; They HATE Windows...lolz
-1. Get Valgrind:
-http://valgrind.org/downloads/valgrind-3.8.1.tar.bz2
+==========================================
 
+1. Get Valgrind:
+	http://valgrind.org/downloads/valgrind-3.8.1.tar.bz2
+
+2. Patch it like it's Hot:
+	https://github.com/archlinuxarm/PKGBUILDs/blob/master/extra/valgrind/valgrind-3.8.1-glibc-2.17.patch
+	(Or see my configure file attached)
+
+3. ./configure; make; sudo make install
+
+4. Install glibc's debuginfo before valgrind explodes
+	sudo apt-get install libc6-dbg
+
+5.Make a Bad Program: (bad_ex4.c)
+	#include <stdio.h>
+
+	/* Warning: This program is wrong on purpose. */
+	int main(){
+	    int age = 10;
+	    int height;
+
+	    printf("I am %d years old.\n");
+	    printf("I am %d inches tall.\n", height);
+	
+	    return 0;
+	}
+6. Steal/create Makefile
+
+7. make
+
+8. Run program on Valgrind:
+	valgrind ./programThatWasBuilt
+	DEBIAN WARNING!: valgrind --track-origins=yes ./programThatWasBuilt
